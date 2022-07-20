@@ -29,3 +29,14 @@ let cookieChecker = Cookies.get(`buttonClicked`);
 
 let redButton = document.getElementById(`redButton`);
 redButton.addEventListener(`click`, deleteButtonClickedCookie);
+
+
+
+// this code creates a variable for the new button and attaches an eventListner that will update(overwrite) the buttonClicked value to no, when new button is clicked
+function updateCookie(details){
+    Cookies.set(`buttonClicked`, `no`);
+}
+
+
+let updateCookieButton = document.getElementById(`updateCookie`)
+updateCookieButton.addEventListener(`click`, updateCookie)
